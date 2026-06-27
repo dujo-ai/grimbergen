@@ -1,0 +1,56 @@
+/* Basic CSS for a clean, responsive look */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* Light background */
+    color: #333;
+}
+
+.site-header {
+    background-color: #0056b3; /* Primary Blue */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-header h1 {
+    margin: 0 0 10px 0;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-placeholder {
+    background-color: #e2e8f0; /* Light gray placeholder */
+    height: 300px; /* Fixed height for visual consistency */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #6b7280;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #374151; /* Dark footer */
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .site-header h1 {
+        font-size: 2em;
+    }
+}
