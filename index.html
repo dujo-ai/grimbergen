@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grimbergen - Photo Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>feestje</title>
+    <!-- Basic styling for readability -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Customizing Tailwind colors/fonts to approximate a professional look */
+        :root {
+            --primary-color: #0056b3; /* A professional blue approximation */
+            --text-color: #1f2937; /* Dark gray text */
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="site-header">
-        <h1>Grimbergen Photo Gallery</h1>
-        <p>A beautiful and responsive showcase of Grimbergen.</p>
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0 text-xl font-bold text-gray-900">
+                    Grimbergen Facie
+                </div>
+                <!-- Menu Options -->
+                <nav class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Key Users</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Here We Are</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Find Your Way</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Want to Communicate?</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <main class="gallery-container">
-        <!-- Photo Placeholders will be generated here by JavaScript -->
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-2">Grimbergen Facie</h1>
+            <p class="text-xl text-gray-600 mb-4">27-06-2026</p>
+        </div>
+
+        <!-- Name List Section -->
+        <div class="bg-white shadow-xl rounded-lg p-8 max-w-3xl mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 border-b pb-2">Team Directory</h2>
+            <ul class="space-y-3 text-lg">
+                <?php foreach ($names as $name): ?>
+                    <li class="flex items-center p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500 shadow-sm">
+                        <span class="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-bold mr-3"><?= substr($name, 0, 1) ?></span>
+                        <?= htmlspecialchars($name) ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 border-b pb-2">Photo Gallery</h2>
+            <div class="gallery-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Photo Placeholders will be generated here by JavaScript -->
+            </div>
+        </div>
+
     </main>
 
     <footer class="site-footer">
@@ -22,5 +70,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+</body class="bg-gray-50 text-gray-800">
 </html>
